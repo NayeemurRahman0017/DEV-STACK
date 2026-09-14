@@ -1,11 +1,16 @@
+import Nav from "./components/Nav"
+import Hero from "./components/Hero"
 
 
 function App() {
   
   return (
-    <h2>
-      DEV STACK
-    </h2>
+    <>
+    <Nav />
+    <Hero />
+    
+    
+    </>
   )
 }
 
