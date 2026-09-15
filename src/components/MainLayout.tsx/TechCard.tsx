@@ -1,15 +1,16 @@
-import React from 'react';
+
 import type { ITechList } from '../../types/techListType';
 interface TechCardProps {
-    TechList: ITechList[];
+    techList: ITechList[];
     isAdded: boolean;
     onAdd: (tech: ITechList) => void;
 }
-const TechCard = ({ TechList, isAdded, onAdd }: TechCardProps) => {
+const TechCard = ({ techList, isAdded, onAdd }: TechCardProps) => {
 
     return (
         <>
-            {TechList.map((tech) => (
+        <div className='grid grid-cols-3 gap-4 mt-6'>
+            {techList.map((tech: ITechList) => (
                 <article key={tech.name} className="groupflex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5
                     shadow-sm transition duration-300 hover:-translate-y-1
                     hover:border-pink-200 hover:shadow-xl">
@@ -40,13 +41,14 @@ const TechCard = ({ TechList, isAdded, onAdd }: TechCardProps) => {
                         className={`mt-6 w-full rounded-xl px-4 py-3 text-sm font-bold transition ${
                             isAdded
                                 ? 'cursor-not-allowed bg-green-100 text-green-700'
-                                : 'bg-gradient-to-r from-pink-500 to-orange-400 text-white hover:-translate-y-0.        5 hover:shadow-lg'
+                                : 'bg-linear-to-r from-pink-500 to-orange-400 text-white hover:-translate-y-0.        5 hover:shadow-lg'
                         }`}
                     >
                         {isAdded ? "✓ Added to Stack" : "Add to Stack"}
                     </button>
                 </article>
             ))}
+        </div>
         </>
     );
 };
