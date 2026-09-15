@@ -24,7 +24,7 @@ const Nav = () => {
                     <button className="text-white-400  py-2 px-4 rounded-lg">
                         Sign in
                     </button>
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition">
+                    <button className="bg-pink-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition">
                         Sign up
                     </button>
                 </ul>

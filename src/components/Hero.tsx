@@ -19,11 +19,11 @@ const Hero = () => {
 
             </p>  
             <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-                <button className="group inline-flex items-center justify-center gap-2 rounded-lg
-                bg-linear-to-r from-purple-600 to-cyan-500 px-7 py-1 font-semibold text-white
-                shadow-purple-500/20 transition hover: scale-105 hover:shadow-purple-500/40">Explore technologies</button>   
-            <button className="group inline-flex items-center justify-center gap-2 rounded-lg
-            border border-slate-600 px-7 py-1 font-semibold text-white transition
+                <button className="min-w-45 rounded-lg
+                bg-linear-to-r from-purple-600 to-cyan-500 px-4 py-2font-semibold text-white
+                purple-500/20 transition hover: scale-105 hover:shadow-purple-500/40">Explore technologies</button>   
+            <button className="min-w-45 rounded-lg
+            border border-slate-600 px-4 py-2 font-semibold text-white transition
             hover:scale-105border-purple-400  hover:bg-purple-500/40">Learn More</button>
             </div>
             </div>
