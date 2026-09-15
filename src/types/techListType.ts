@@ -1,4 +1,4 @@
-interface ItechList {
+export interface ITechList {
   id: string;
   name: string;
   category: string;

@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vitez
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
