@@ -6,6 +6,7 @@ import logo from "../assets/logo-text.png";
 const Footer = () => {
     return (
         <footer className="bg-gray-950 text-gray-300">
+            <div className="container mx-auto px-4">
 
         
         <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
@@ -56,13 +57,17 @@ const Footer = () => {
                     
                 </div>
             </div>
-            <div className="border-t border-gray-800">
-                <div className="mx-auto flex max-w-8xl flex-col gap-3 px-4 py-5 text-sm text-gray-500
+            <div className="col-span-full w-full border-t border-gray-800">
+
+        <div className="mx-auto flex items-center max-w-7xl flex-col px-4 py-4 text-sm text-gray-500
                 sm:px-6 md:flex-row
-                md:justify-beetween lg:px-8">
-                    <p>© 2026 Dev Stack. All rights reserved.</p>
-                </div>
+            
+                md:justify-between lg:px-8">
+                    <p className="whitespace-nowrap">© 2026 Dev Stack. All rights reserved.</p>
+                
             </div>
+            </div>
+        </div>
         </div>
         </footer>
     );

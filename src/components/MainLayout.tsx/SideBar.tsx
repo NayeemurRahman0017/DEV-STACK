@@ -14,7 +14,7 @@ const SideBar = ({ stack, onRemove, onRemoveall }: SideBarProps) => {
         
             <aside
                 id="SideBar"
-                className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="h-fit rounded-2xl border border-slate-200 bg-gray-300 p-5 shadow-sm"
             >
                 <div className="flex items-start justify-between">
                     <div>

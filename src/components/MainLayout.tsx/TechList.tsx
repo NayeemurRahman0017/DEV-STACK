@@ -24,8 +24,20 @@ const TechList = ({ techListPromise }: { techListPromise: () => Promise<ITechLis
         <div className="container mx-auto flex justify-between items-center ">
             
        
-        <div className="grid grid-cols-3gap-6 lg:grid-cols-4">
+        <div className="grid grid-cols-3 gap-6 lg:grid-cols-4">
             <div className="lg:col-span-3">
+                <div className="mb-8 text-left">
+                    <h2 className="text-3xl font-bold text-slate-900">
+                        Explore the{" "}
+                        <span className="bg-linear-to-r from-pink-500 to-violet-500 bg-clip-text text-transparent">
+                            Technologies
+                        </span>
+                    </h2>
+                    <p className="mt-2 text-base font-normal text-slate-500">
+                        Pick one technologyper category to build your ideal stack.
+                    </p>
+                </div>
+                
                 <div className="grid grid-cols-3 gap-3 md;grid-cols-1">
                     {TechList.map((tech) =>
                     (
@@ -39,7 +51,8 @@ const TechList = ({ techListPromise }: { techListPromise: () => Promise<ITechLis
                         />
                     ))}
                 </div>
-            </div><div>
+            </div>
+            <div className="min-w-0">
                 <SideBar
                 stack={stack}
                 onRemove={handleremove}
@@ -50,6 +63,8 @@ const TechList = ({ techListPromise }: { techListPromise: () => Promise<ITechLis
                     
                 </div>
                 </div>
+                
+                
         
 
     );
