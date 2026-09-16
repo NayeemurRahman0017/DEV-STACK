@@ -7,14 +7,13 @@ const Nav = () => {
         <nav className="sticky top-0 z-50 bg-gray-800 text-white">
             <div className="container mx-auto px-4">
 
-                {/* ================= MOBILE NAVBAR ================= */}
                 <div className="md:hidden h-16 flex items-center justify-between">
 
-                    {/* Hamburger */}
+        
                     <label className="btn btn-circle swap swap-rotate">
                         <input type="checkbox" />
 
-                        {/* Hamburger icon */}
+        
                         <svg
                             className="swap-off fill-current"
                             xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +45,7 @@ const Nav = () => {
                     />
 
 
-                    {/* Mobile Auth Buttons */}
+    
                     <div className="flex items-center gap-2">
                         <button className="text-sm px-2 py-1">
                             Sign In
@@ -60,7 +59,7 @@ const Nav = () => {
                 </div>
 
 
-                {/* ================= DESKTOP NAVBAR ================= */}
+                
                 <div className="hidden md:flex h-16 items-center justify-between">
 
                     {/* Logo + Brand */}
@@ -75,7 +74,7 @@ const Nav = () => {
                     </div>
 
 
-                    {/* Navigation Links */}
+                
                     <ul className="flex items-center gap-6">
                         <li>
                             <a href="#home">Home</a>
@@ -99,7 +98,7 @@ const Nav = () => {
                     </ul>
 
 
-                    {/* Desktop Auth Buttons */}
+                    
                     <div className="flex items-center gap-3">
                         <button className="px-4 py-2">
                             Sign In
