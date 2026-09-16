@@ -3,6 +3,7 @@ import Nav from "./components/Nav"
 import Hero from "./components/Hero"
 import TechList from "./components/MainLayout.tsx/TechList"
 import type { ITechList } from "./types/techListType"
+import Footer from "./components/Footer"
 
 const techListFetch = async (): Promise<ITechList[]> => {
   const res = await fetch("/data.json")
@@ -20,6 +21,7 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <TechList techListPromise={() => techListPromise} />
       </Suspense>
+      <Footer/>
     </>
   )
 }

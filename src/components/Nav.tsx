@@ -24,7 +24,7 @@ const Nav = () => {
                             <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
                         </svg>
 
-                        {/* Close icon */}
+                    
                         <svg
                             className="swap-on fill-current"
                             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ const Nav = () => {
                     </label>
 
 
-                    {/* Center Logo */}
+                    
                     <img
                         src={logo}
                         alt="Dev Stack Logo"
