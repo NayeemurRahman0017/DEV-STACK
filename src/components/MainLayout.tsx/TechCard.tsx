@@ -9,13 +9,13 @@ const TechCard = ({ techList, isAdded, onAdd }: TechCardProps) => {
 
     return (
         <>
-        <div className='grid grid-cols-3 gap-4 mt-6'>
+        
             {techList.map((tech: ITechList) => (
-                <article key={tech.name} className="groupflex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5
+                <article key={tech.name} className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-5
                     shadow-sm transition duration-300 hover:-translate-y-1
                     hover:border-pink-200 hover:shadow-xl">
 
-                    <div className="mb-5 flex items-center justify-between">
+                    <div className="mb-4 flex items-center justify-between">
                         <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-slate-50 p-2">
                             <img src={tech.icon} alt={`${tech.name} icon`} className="h-10 w-10 object-contain transition duration-300
                             group-hover:scale-110" />
@@ -38,7 +38,7 @@ const TechCard = ({ techList, isAdded, onAdd }: TechCardProps) => {
                     <button
                         onClick={() => onAdd(tech)}
                         disabled={isAdded}
-                        className={`mt-6 w-full rounded-xl px-4 py-3 text-sm font-bold transition ${
+                        className={`mt-auto w-full rounded-xl px-4 py-3 text-sm font-bold transition ${
                             isAdded
                                 ? 'cursor-not-allowed bg-green-100 text-green-700'
                                 : 'bg-linear-to-r from-pink-500 to-orange-400 text-white hover:-translate-y-0.        5 hover:shadow-lg'
@@ -48,7 +48,7 @@ const TechCard = ({ techList, isAdded, onAdd }: TechCardProps) => {
                     </button>
                 </article>
             ))}
-        </div>
+        
         </>
     );
 };

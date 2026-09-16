@@ -21,6 +21,9 @@ const TechList = ({ techListPromise }: { techListPromise: () => Promise<ITechLis
         setStack([]);
     };
     return (
+        <div className="container mx-auto flex justify-between items-center ">
+            
+       
         <div className="grid grid-cols-3gap-6 lg:grid-cols-4">
             <div className="lg:col-span-3">
                 <div className="grid grid-cols-3 gap-3 md;grid-cols-1">
@@ -45,8 +48,10 @@ const TechList = ({ techListPromise }: { techListPromise: () => Promise<ITechLis
             
                 
                     
-                
-        </div>
+                </div>
+                </div>
+        
+
     );
 };
 

@@ -1,4 +1,4 @@
-import type { JSX } from "react/jsx-runtime";
+
 
 export interface ITechList {
   id: string;
