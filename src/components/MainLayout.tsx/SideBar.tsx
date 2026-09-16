@@ -1,4 +1,5 @@
 
+import { FiX } from 'react-icons/fi';
 import type { ITechList } from '../../types/techListType';
 interface SideBarProps {
     stack: ITechList[];
@@ -13,7 +14,7 @@ const SideBar = ({ stack, onRemove, onRemoveall }: SideBarProps) => {
         
             <aside
                 id="SideBar"
-                className="sticky top-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+                className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
             >
                 <div className="flex items-start justify-between">
                     <div>
@@ -21,43 +22,61 @@ const SideBar = ({ stack, onRemove, onRemoveall }: SideBarProps) => {
                             Your stack
                         </h2>
                         <p className="mt-1 text-sm text-gray-500">
-                            {total}{" "}
-                            {total === 1 ? 'TechCard' : 'Techcards'} Selected
+                            {stack.length}{" "}
+                            {stack.length === 1 ? 'TechCard' : 'Techcards'} Selected
                         </p>
                     </div>
                     <div className="flex h-9 w-9 items-center justify-center rounded-full bg-pink-50 font-bold text-pink-600">
                         {total}
                     </div>
                 </div>
-                {total > 0 && (
-                    <>
-                        <div className="mt-5 space-y-3">
-                            {stack.map((tech) => (
-                                <div key={tech.id} className="flex items-center justify-between rounded-xl border border-slate-200 bg-slate-50 px-3 py-2">
-                                    <span className="text-sm font-medium text-slate-700">{tech.name}</span>
-                                    <button
-                                        type="button"
-                                        onClick={() => onRemove(tech.id)}
-                                        className="text-xs font-semibold text-pink-600 hover:text-pink-700"
-                                    >
-                                        x
-                                    </button>
-                                </div>
-                            ))}
-                        </div>
-                        <button
-                            type="button"
-                            onClick={onRemoveall}
-                            className="mt-5 w-full rounded-xl border border-pink-200 px-4 py-2 text-sm font-semibold text-pink-600 hover:bg-pink-50"
-                        >
-                            Remove All
-                        </button>
-                    </>
-                )}
-            </aside>
-        
-       
-    );
-};
+                
+                        {
+                            stack.length===0?(
+                                <div className="py-12 text-center">
+                                    <p className="text-sm text-gray-500">
+                                        Your stack is empty.
+                                    </p>
+                                    <p className="mt-1 text-xs text-gray-400">
+                                        Add technologies to build your stack.
+                                    </p>
+                                    </div>):(
+                                        <div className="mt-5 space-y-3">
+                                            {stack.map((tech) => (
+                                                <div
+                                                    key={tech.id}
+                                                    className="flex items-center gap-3 rounded-xl border border-gray-100 bg-gray-50 py-3"
+                                                >
+                                                    <img src={tech.icon} alt={tech.name} className="h-9 w-9 object-contain" />
+                                                    <div className="min-w-0 flex-1">
+                                                        <h3 className="truncate text-sm font-semibold text-gray-900">
+                                                            {tech.name}
+                                                        </h3>
+                                                        <p className="text-xs text-gray-500">{tech.category}</p>
+                                                    </div>
+                                                    <button
+                                                        onClick={() => onRemove(tech.id)}
+                                                        className="rounded-lg p-2 text-gray-400 hover:bg-red-100 hover:text-red-500"
+                                                        aria-label={`remove ${tech.name}`}
+                                                    >
+                                                        <FiX />
+                                                    </button>
+                                                </div>
+                                            ))}
+                                            <button
+                                                type="button"
+                                                onClick={onRemoveall}
+                                                className="flex items-center gap-1 text-sm font-medium text-red-500 hover:text-red-600"
+                                            >
+                                                Remove All
+                                            </button>
+                                        </div>
+                                                    )}
+                                                        </aside>
+                                                    );
+                                                    };
+
+                                                    
+                                                
 
 export default SideBar;
