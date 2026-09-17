@@ -47,7 +47,7 @@ const Nav = () => {
 
     
                     <div className="flex items-center gap-2">
-                        <button className="text-sm px-2 py-1">
+                        <button className="bg-orange-500 px-1 py-1 text-xs font-normal">
                             Sign In
                         </button>
 

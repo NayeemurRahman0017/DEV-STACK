@@ -4,6 +4,8 @@ import Hero from "./components/Hero"
 import TechList from "./components/MainLayout.tsx/TechList"
 import type { ITechList } from "./types/techListType"
 import Footer from "./components/Footer"
+import {ToastContainer} from"react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const techListFetch = async (): Promise<ITechList[]> => {
   const res = await fetch("/data.json")
@@ -22,6 +24,12 @@ function App() {
         <TechList techListPromise={() => techListPromise} />
       </Suspense>
       <Footer/>
+      <ToastContainer 
+      position="top-right" 
+      autoClose={100}
+      hideProgressBar={true}
+      theme="light"
+      />
     </>
   )
 }
