@@ -80,7 +80,7 @@ A child can communicate back to the parent by receiving a **callback function** 
 
 ## 👨‍💻 Author
 
-**Dev Stack Builder**
+**MD. NAYEEMUR RAHMAN BHUIYAN NAYEEM**
 
 Built with ❤️ using React, TypeScript, and Tailwind CSS.
 
